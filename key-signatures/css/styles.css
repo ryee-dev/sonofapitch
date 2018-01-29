@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+}
+
+label {
+  padding-right: 15px;
+}
+
+#displayKey {
+  display: none;
+}

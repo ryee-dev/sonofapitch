@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.treble {
+  width: 5%;
+}
+
+.keyboard, .circle {
+  display:block;
+  margin: 0 auto;
+  width:40%;
+}
+
+.results {
+  border: 1px solid lightgrey;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+h3 {
+  color: grey;
+  text-align: center;
+}
+
+p, ul, li {
+  text-align: left;
+  color: grey;
+    list-style-type: none;
+}
+
+.results .major, .minor {
+  padding-left: 20px;
+}
+
+#cminor {
+  width: 50%;
+}
+
+.keysignature {
+  display:none;
+}
