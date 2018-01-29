@@ -1,14 +1,47 @@
+h1 {
+  background-color: white;
+}
 body {
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  background-color: white;
+}
+.kb {
+  display:inline;
+}
+
+img {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+#kb-c, #kb-e, #kb-d {
+  position:relative;
+  height:280px;
+  width:60px;
+}
+
+#kb-black-csharp {
+  width:25px;
+  height: 107px;
+  position:absolute;
+  margin-left: -7.7%;
+  margin-bottom: 18.4%;
 
 }
 
+#kb-black-dsharp {
+  position:absolute;
+  width:25px;
+  height: 107px;
+  margin-left: -3.2%;
+  margin-bottom: 5.4%;
+}
 .treble {
   width: 5%;
 }
 
-.keyboard, .circle {
+.kb, .circle {
   display:block;
   margin: 0 auto;
   width:40%;
@@ -19,7 +52,7 @@ body {
   width: 400px;
   display: block;
   margin: 0 auto;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 h3 {
@@ -33,14 +66,28 @@ p, ul, li {
     list-style-type: none;
 }
 
-.results .major, .minor {
+ .major, .minor {
   padding-left: 20px;
+}
+
+#results {
+  background-color:white;
+  padding-left: 20px;
+  width: 30%;
 }
 
 #cminor {
   width: 50%;
 }
 
-.keysignature {
+ .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .ab, .a, .asharp, .b {
   display:none;
+}
+
+.ui.grey.basic.button {
+  font-size: 15px;
+}
+
+.pitch {
+  width:10%;
 }
