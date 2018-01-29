@@ -6,8 +6,11 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: white;
 }
-.kb {
-  display:inline;
+
+.piano {
+  background-color:black;
+  width: 840px;
+  margin: 0 auto;
 }
 
 img {
@@ -15,7 +18,7 @@ img {
   margin-right: -2px;
 }
 
-#kb-c, #kb-e, #kb-d {
+.keys{
   position:relative;
   height:280px;
   width:60px;
@@ -47,14 +50,6 @@ img {
   width:40%;
 }
 
-.results {
-  border: 1px solid lightgrey;
-  width: 400px;
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 h3 {
   color: grey;
   text-align: center;
@@ -74,6 +69,12 @@ p, ul, li {
   background-color:white;
   padding-left: 20px;
   width: 30%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid darkgrey;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #cminor {
@@ -90,4 +91,8 @@ p, ul, li {
 
 .pitch {
   width:10%;
+}
+
+#header {
+  margin-bottom:20px;
 }
