@@ -28,7 +28,21 @@ Scale.prototype.createMinorScaleArray = function() {
   return this.scaleArray;
 }
 
+function playNote(note){
+  var synth = new Tone.Synth().toMaster()
+  synth.triggerAttackRelease(note, '8n')
+}
+
+Scale.prototype.playScale function(){
+  this.scaleArray.forEach(function(note){
+    playNote(note);
+
+  })
+}
+
 $(document).ready(function() {
+
+
   $(".key").click(function() {
     $("#scaleList").empty();
     var keyPick = ($(this).text());
@@ -36,13 +50,14 @@ $(document).ready(function() {
     if ($("#major").is(":checked")){
       $("#scaleList").empty();
       var majorScaleArray = newScale.createMajorScaleArray();
+      newScale.playScale();
       $("#scaleList").append("<p>" + majorScaleArray + "</p>");
     } else if ($("#minor").is(":checked")){
       $("#scaleList").empty();
       var minorScaleArray = newScale.createMinorScaleArray();
       $("#scaleList").append("<p>" + minorScaleArray + "</p>");
     } else {
-      alert("Pick Major, Minor, or Pentatonic.");
+      playNote(keyPick);
     }
   });
 });
