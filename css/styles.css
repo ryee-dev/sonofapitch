@@ -18,7 +18,11 @@ img {
   margin-right: -2px;
 }
 
+<<<<<<< HEAD
+.kb-c, .kb-e, .kb-d {
+=======
 .keys{
+>>>>>>> 2e167b4aee0f8d82388d7cbb3a850c06d9ee6581
   position:relative;
   height:280px;
   width:60px;
@@ -82,9 +86,14 @@ p, ul, li {
   width: 50%;
 }
 
+<<<<<<< HEAD
+ .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .ab, .a, .asharp, .b {
+  /*display:none;*/
+=======
  .c, .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .ab, .a, .asharp, .b {
   display:none;
 
+>>>>>>> 2e167b4aee0f8d82388d7cbb3a850c06d9ee6581
 }
 
 .ui.grey.basic.button {
