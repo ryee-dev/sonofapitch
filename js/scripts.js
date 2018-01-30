@@ -1,40 +1,53 @@
+// function Notes(keySignature) {
+//     this.majorScale = [];
+//     this.minorScale = [];
+//     this.keySignature = keySignature;
+// }
+
 $(document).ready(function() {
-    $("#c4").click(function(){
-      $("#results").fadeIn();
-      $(".c").fadeIn();
 
-    });
-    $("#d4").click(function(){
-      $("#results").fadeIn();
-      $(".d").fadeIn();
+  $("#c4").click(function(){
+    $(".c").fadeIn();
+    $("#results").fadeIn();
+  });
 
-    })
-    $("#e4").click(function(){
-      $("#results").fadeIn();
-      $(".e").fadeIn();
-    })
-    $("#f4").click(function(){
-      $("#results").fadeIn();
-      $(".f").fadeIn();
-    })
-    $("#kb-g4").click(function(){
-      $("#results").fadeIn();
-      $(".g").fadeIn();
-    })
-    $("#kb-a5").click(function(){
-      $("#results").fadeIn();
-      $(".a").fadeIn();
-    })
-    $("#kb-b5").click(function(){
-      $("#results").fadeIn();
-      $(".b").fadeIn();
-    })
-    $("#kb-c5").click(function(){
-      $("#results").fadeIn();
-      $(".c").fadeIn();
-    })
+  $("#d4").click(function(){
+    $(".d").fadeIn();
+    $("#results").fadeIn();
+  });
 
-    $("#close-button").click(function(){
-      $("#results").fadeOut();
-    })
+  $("#e4").click(function(){
+    $("#results").fadeIn();
+    $(".e").fadeIn();
+  });
+
+  $("#f4").click(function(){
+    $("#results").fadeIn();
+    $(".f").fadeIn();
+  });
+
+  $("#g4").click(function(){
+    $("#results").fadeIn();
+    $(".g").fadeIn();
+  });
+
+  $("#a5").click(function(){
+    $("#results").fadeIn();
+    $(".a").fadeIn();
+  });
+
+  $("#b5").click(function(){
+    $("#results").fadeIn();
+    $(".b").fadeIn();
+  });
+
+  $("#c5").click(function(){
+    $("#results").fadeIn();
+    $(".c").fadeIn();
+  });
+
+  $("button#close-button").click(function(){
+    $("#results").fadeOut();
+  });
+
 });
