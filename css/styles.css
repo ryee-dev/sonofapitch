@@ -1,6 +1,7 @@
 h1 {
   background-color: white;
 }
+
 body {
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -33,7 +34,7 @@ ol {
 
 li {
   position: relative;
-  background-color: #FFFFF0;
+  background-color: white;
   z-index: 1;
   padding: 320px 30px 100px;
   display: inline-block;
@@ -53,7 +54,7 @@ li:active {
 .ebony {
   position: absolute;
   z-index: 2;
-  background-color:#1d1d1d;
+  background-color: #1d1d1d;
   padding: 230px 12px 12px;
   top: 0px;
   margin-left: -31px;
@@ -62,9 +63,11 @@ li:active {
   border-color: #000;
   border-bottom-color: #2a2a2a;
 }
+
 .ebony:hover {
-    color: white;
+  color: white;
 }
+
 .ebony:active {
   border-bottom-width: 8px;
   box-shadow: none;
@@ -76,7 +79,7 @@ li:active {
 
 .ivory:active {
   border-bottom-width: 8px;
-  box-shadow: none;
+  box-shadow: white;
 }
 
 #C {
@@ -85,4 +88,9 @@ li:active {
 
 #B1 {
   border-top-right-radius: 8px;
+}
+
+.radio {
+  font-size: 24px;
+  display: inline-flex;
 }
