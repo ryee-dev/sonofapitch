@@ -9,7 +9,7 @@ body {
 
 .piano {
   background-color:black;
-  width: 850px;
+  width: 840px;
   margin: 0 auto;
 }
 
@@ -72,7 +72,7 @@ p, ul, li {
   display: block;
   margin: 0 auto;
   margin-top: 20px;
-  border: 1px solid darkgrey;
+  border: 1px solid lightgrey;
   padding-top: 20px;
   padding-bottom: 20px;
   display:none;
@@ -82,7 +82,7 @@ p, ul, li {
   width: 50%;
 }
 
- .c, .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .ab, .a, .asharp, .b {
+ .c, .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .aflat, .a, .asharp, .b {
   display:none;
 
 }
