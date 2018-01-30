@@ -14,9 +14,17 @@ ol {
   margin-top: 50px;
 }
 
-#pitch {
-  margin-left: 242px;
-  margin-top: -172px;
+#logo {
+  height: 300px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#piano {
+  margin-top: -50px;
+  padding-bottom: 15px;
+
 }
 
 .treble {
@@ -25,19 +33,6 @@ ol {
   margin-top: 40px;
 }
 
-.pitch {
-  width:7%;
-  margin-left: -15px;
-  margin-right: -2px;
-  margin-top: -9px;
-}
-
-.header {
-  margin-bottom: 8em;
-  margin-top: -1em;
-  margin-left: -58px;
-  text-align: center;
-}
 
 .c, .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .ab, .a, .asharp, .b {
  display:none;
@@ -49,7 +44,7 @@ li {
   position: relative;
   background-color: #FFFFF0;
   z-index: 1;
-  padding: 320px 30px 100px;
+  padding: 275px 25px 80px;
   display: inline-block;
   border: 1px solid #ccc;
   font-size: 20px;
@@ -68,7 +63,7 @@ li:active {
   position: absolute;
   z-index: 2;
   background-color: #1d1d1d;
-  padding: 230px 12px 12px;
+  padding: 200px 4px 12px;
   top: 0px;
   margin-left: -31px;
   box-shadow: none;
@@ -88,6 +83,7 @@ li:active {
 
 .ivory {
   background-color: white;
+  height: 20%;
 }
 
 .ivory:hover {

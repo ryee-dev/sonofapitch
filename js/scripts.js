@@ -33,13 +33,13 @@ $(document).ready(function() {
   $(".key").click(function() {
     var majButton = $(("#major").checked);
     var minButton = $(("#minor").checked);
-    if (majButton){
-      alert("butt");
-    } else if (minButton){
-      alert("lil butt");
-    } else {
-      alert("no butt");
-    }
+    // if (majButton){
+    //   alert("butt");
+    // } else if (minButton){
+    //   alert("lil butt");
+    // } else {
+    //   alert("no butt");
+    // }
     // if(){
     //   $("#scaleList").empty();
     //   var keyPick = ($(this).text());
