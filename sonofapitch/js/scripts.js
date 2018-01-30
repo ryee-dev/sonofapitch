@@ -28,25 +28,35 @@ Scale.prototype.createMinorScaleArray = function() {
   return this.scaleArray;
 }
 
+Scale.prototype.createPentaScaleArray = function() {
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 6]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  return this.scaleArray;
+}
 
 $(document).ready(function() {
   $(".key").click(function() {
-    var majButton = $(("#major").checked);
-    var minButton = $(("#minor").checked);
-    if (majButton){
-      alert("butt");
-    } else if (minButton){
-      alert("lil butt");
+    $("#scaleList").empty();
+    var keyPick = ($(this).text());
+    var newScale = new Scale(keyPick);
+    if ($("#major").is(":checked")){
+      $("#scaleList").empty();
+      var majorScaleArray = newScale.createMajorScaleArray();
+      $("#scaleList").append("<p>" + majorScaleArray + "</p>");
+    } else if ($("#minor").is(":checked")){
+      $("#scaleList").empty();
+      var minorScaleArray = newScale.createMinorScaleArray();
+      $("#scaleList").append("<p>" + minorScaleArray + "</p>");
+    } else if ($("#penta").is(":checked")){
+      $("#scaleList").empty();
+      var pentaScaleArray = newScale.createPentaScaleArray();
+      $("#scaleList").append("<p>" + pentaScaleArray + "</p>");
     } else {
-      alert("no butt");
+      alert("Pick Major, Minor, or Pentatonic.");
     }
-    // if(){
-    //   $("#scaleList").empty();
-    //   var keyPick = ($(this).text());
-    //   var newScale = new Scale(keyPick);
-    //   var majorScaleArray = newScale.createMajorScaleArray();
-    //   $("#scaleList").append("<p>" + majorScaleArray + "</p>");
-    // }
   });
-
 });

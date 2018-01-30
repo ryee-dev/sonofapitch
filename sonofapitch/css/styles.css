@@ -34,7 +34,7 @@ ol {
 
 li {
   position: relative;
-  background-color: #FFFFF0;
+  background-color: white;
   z-index: 1;
   padding: 320px 30px 100px;
   display: inline-block;
@@ -79,7 +79,7 @@ li:active {
 
 .ivory:active {
   border-bottom-width: 8px;
-  box-shadow: none;
+  box-shadow: white;
 }
 
 #C {
