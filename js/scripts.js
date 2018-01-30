@@ -1,83 +1,52 @@
+function Scale(root) {
+  this.pianoKeyArray = ["C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4", "C5", "C#5", "D5", "D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5", "B5", "C6", "C#6", "D6", "D#6", "E6", "F6", "F#6", "G6", "G#6", "A6", "A#6", "B6"]
+  this.root = root;
+  this.rootIndex = this.pianoKeyArray.indexOf(this.root);
+  this.scaleArray = [];
+}
+
+Scale.prototype.createMajorScaleArray = function() {
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 9]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 11]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 12]);
+  return this.scaleArray;
+}
+
+Scale.prototype.createMinorScaleArray = function() {
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 6]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 9]);
+  return this.scaleArray;
+}
+
+
 $(document).ready(function() {
-    $("#c4").click(function(){
-      $("#results").fadeIn();
-      $(".c").fadeIn();
+  $(".key").click(function() {
+    var majButton = $(("#major").checked);
+    var minButton = $(("#minor").checked);
+    if (majButton){
+      alert("butt");
+    } else if (minButton){
+      alert("lil butt");
+    } else {
+      alert("no butt");
+    }
+    // if(){
+    //   $("#scaleList").empty();
+    //   var keyPick = ($(this).text());
+    //   var newScale = new Scale(keyPick);
+    //   var majorScaleArray = newScale.createMajorScaleArray();
+    //   $("#scaleList").append("<p>" + majorScaleArray + "</p>");
+    // }
+  });
 
-    });
-    $("#d4").click(function(){
-      $("#results").fadeIn();
-      $(".d").fadeIn();
-
-    })
-    $("#e4").click(function(){
-      $("#results").fadeIn();
-      $(".e").fadeIn();
-    })
-    $("#f4").click(function(){
-      $("#results").fadeIn();
-      $(".f").fadeIn();
-    })
-    $("#kb-g4").click(function(){
-      $("#results").fadeIn();
-      $(".g").fadeIn();
-    })
-    $("#kb-a4").click(function(){
-      $("#results").fadeIn();
-      $(".a").fadeIn();
-    })
-    $("#kb-b4").click(function(){
-      $("#results").fadeIn();
-      $(".b").fadeIn();
-    })
-    $("#kb-a5").click(function(){
-      $("#results").fadeIn();
-      $(".a").fadeIn();
-    })
-    $("#kb-b5").click(function(){
-      $("#results").fadeIn();
-      $(".b").fadeIn();
-    })
-    $("#kb-c5").click(function(){
-      $("#results").fadeIn();
-      $(".c").fadeIn();
-    })
-
-    $("#kb-d5").click(function(){
-      $("#results").fadeIn();
-      $(".d").fadeIn();
-
-    });
-    $("#kb-e5").click(function(){
-      $("#results").fadeIn();
-      $(".e").fadeIn();
-
-    })
-    $("#kb-f5").click(function(){
-      $("#results").fadeIn();
-      $(".f").fadeIn();
-    })
-    $("#kb-g5").click(function(){
-      $("#results").fadeIn();
-      $(".g").fadeIn();
-    })
-    $("#kb-a5").click(function(){
-      $("#results").fadeIn();
-      $(".a").fadeIn();
-    })
-    $("#kb-b5").click(function(){
-      $("#results").fadeIn();
-      $(".b").fadeIn();
-    })
-
-    $(".close-button").click(function(){
-      $(".c").fadeOut();
-      $(".d").fadeOut();
-      $(".e").fadeOut();
-      $(".f").fadeOut();
-      $(".g").fadeOut();
-      $(".a").fadeOut();
-      $(".b").fadeOut();
-      $("#results").fadeToggle();
-
-    })
 });
