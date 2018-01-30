@@ -61,8 +61,8 @@ p, ul, li {
     list-style-type: none;
 }
 
- .major, .minor {
-  padding-left: 20px;
+ p, .major, .minor {
+  text-align: center;
 }
 
 #results {
