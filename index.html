@@ -14,22 +14,12 @@
     <div class="container" id="header">
       <h1><img src="img/treble.png" class="treble">on of a <img src="img/p.png" class="pitch">itch</h1>
     </div>
-    <div class="ui form">
-    <div class="inline fields">
-      <label>Choose one: </label>
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input type="radio" name="major" checked="checked">
-          <label>Major</label>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input type="radio" name="minor">
-          <label>Minor</label>
-        </div>
-      </div>
-  </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Major</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Minor</label>
+    </div>
     <div class="piano">
         <img src="img/white-left.png" class="keys" id="c4" value="C4">
         <img src="img/white-center-2.png" class="keys" id="d4" value="D4">
@@ -50,172 +40,182 @@
       <div id="results">
         <div class="c">
           <h3>C</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">C D E F G A B</p>
             <p>Minor</p>
               <p class="minor">C D E♭ F G A♭ B♭</p>
-          <p class="major">Major</p>
-            <img src="img/cmajor.png" class="cmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/cminor.png" class="cminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/cmajor.png" class="cmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/cminor.png" class="cminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="csharp">
           <h3>C#/D♭</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">C♯ D♯ E♯ F♯ G♯ A♯ B♯</p>
             <p>Minor</p>
               <p class="minor">C♯ D♯ E F♯ G♯ A B</p>
-          <p class="major">Major</p>
-            <img src="img/csharpmajor.png" class="csharpmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/csharpminor.png" class="csharpminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/csharpmajor.png" class="csharpmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/csharpminor.png" class="csharpminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="d">
           <h3>D</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">D E F♯ G A B C♯</p>
             <p>Minor</p>
               <p class="minor">D E F G A B♯ C</p>
-          <p class="major">Major</p>
-            <img src="img/dmajor.png" class="dmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/dminor.png" class="dminorkey">
-          </p>
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/dmajor.png" class="dmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/dminor.png" class="dminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="dsharp">
           <h3>D#/E♭</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">E♭ F G A♭ B♭ C D</p>
             <p>Minor</p>
               <p class="minor">E♭ F G♭ A♭ B♭ C♭ D♭</p>
-          <p class="major">Major</p>
-            <img src="img/ebmajor.png" class="ebmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/dsharpminor.png" class="dsharpminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/ebmajor.png" class="ebmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/dsharpminor.png" class="dsharpminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="e">
           <h3>E</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">E F♯ G♯ A B C♯ D♯</p>
             <p>Minor</p>
               <p class="minor">E F♯ G A B C D</p>
-          <p class="major">Major</p>
-            <img src="img/emajor.png" class="eminorkey">
-          <p class="minor">Minor</p>
-            <img src="img/eminor.png" class="eminorkey">
-          </p>
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/emajor.png" class="eminorkey">
+            <p class="minor">Minor</p>
+              <img src="img/eminor.png" class="eminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="f">
           <h3>F</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">F G A B♭ C D</p>
             <p>Minor</p>
               <p class="minor">F G A♭ B♭ C D♭ E♭</p>
-          <p class="major">Major</p>
-            <img src="img/fmajor.png" class="fmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/fminor.png" class="fminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/fmajor.png" class="fmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/fminor.png" class="fminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="fsharp">
           <h3>F#/G♭</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">F♯ G♯ A♯ B C♯ D♯ E♯</p>
             <p>Minor</p>
               <p class="minor">F♯ G♯ A B C♯ D E</p>
-          <p class="major">Major</p>
-            <img src="img/fsharpmajor.png" class="fsharpmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/fsharpminor.png" class="fsharpminorkey">
-          <p class="chords">Chords</p>
-          <p class="pitch">Hear Pitch</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/fsharpmajor.png" class="fsharpmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/fsharpminor.png" class="fsharpminorkey">
+          <h4 class="chords">Chords</h4>
+          <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="g">
           <h3>G</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">G A B C D E F♯</p>
             <p>Minor</p>
               <p class="minor">G A B♭ C D E♭ F</p>
-          <p class="major">Major</p>
-            <img src="img/gmajor.png" class="gmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/gminor.png" class="gminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/gmajor.png" class="gmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/gminor.png" class="gminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="ab">
           <h3>G♯/A♭</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">A♭ B♭ C D♭ E♭ F G</p>
             <p>Minor</p>
               <p class="minor">A♭ B♭ C♭ D♭ E♭ F♭ G♭</p>
-          <p class="major">Major</p>
-            <img src="img/abmajor.png" class="abmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/abminor.png" class="abminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/abmajor.png" class="abmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/abminor.png" class="abminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="a">
           <h3>A</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">A B C♯ D E F♯ G♯</p>
             <p>Minor</p>
               <p class="minor">A B C D E F G</p>
-          <p class="major">Major</p>
-            <img src="img/amajor.png" class="amajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/aminor.png" class="aminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/amajor.png" class="amajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/aminor.png" class="aminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="asharp">
           <h3>A#/B♭</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">B♭ C D E♭ F G A</p>
             <p>Minor</p>
               <p class="minor">B♭ C D♭ E♭ F G♭ A♭</p>
-          <p class="major">Major</p>
-            <img src="img/bbmajor.png" class="asharpmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/csharpmajor.png" class="asharpminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/bbmajor.png" class="asharpmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/csharpmajor.png" class="asharpminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
         <div class="b">
           <h3>B</h3>
-          <p>Scales</p>
+          <h4>Scales</h4>
             <p>Major</p>
               <p class="major">B C♯ D♯ E F♯ G♯ A♯</p>
             <p>Minor</p>
               <p class="major">B C♯ D E F♯ G A</p>
-          <p class="major">Major</p>
-            <img src="img/bmajor.png" class="bmajorkey">
-          <p class="minor">Minor</p>
-            <img src="img/bminor.png" class="bminorkey">
-          <p class="chords">Chords</p>
+          <h4>Key Signatures</h4>
+            <p class="major">Major</p>
+              <img src="img/bmajor.png" class="bmajorkey">
+            <p class="minor">Minor</p>
+              <img src="img/bminor.png" class="bminorkey">
+          <h4 class="chords">Chords</h4>
           <button class="ui grey basic button">Hear Pitch</button>
         </div>
       </div>
