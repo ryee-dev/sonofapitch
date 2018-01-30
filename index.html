@@ -13,22 +13,6 @@
   <body>
     <div class="container" id="header">
       <h1><img src="img/treble.png" class="treble">on of a <img src="img/p.png" class="pitch">itch</h1>
-<<<<<<< HEAD
-        <img src="img/white-left.png" id="C3" class="kb-c">
-        <img src="img/white-center-2.png" id="D3" class="kb-d">
-        <img src="img/white-right.png" id="E3" class="kb-e">
-        <img src="img/white-left.png" id="F3" class="kb-c">
-        <img src="img/white-center-2.png" id="G3"class="kb-d">
-        <img src="img/white-center-2.png" id="A3"class="kb-d">
-        <img src="img/white-right.png" id="B3" class="kb-e">
-        <img src="img/white-left.png" id="C4" class="kb-c">
-        <img src="img/white-center-2.png" id="D4"class="kb-d">
-        <img src="img/white-right.png" id="E4"class="kb-e">
-        <img src="img/white-left.png" id="F4"class="kb-c">
-        <img src="img/white-center-2.png" id="G4" class="kb-d">
-        <img src="img/white-center-2.png" id="A4"class="kb-d">
-        <img src="img/white-right.png" id="B4"class="kb-e">
-=======
     </div>
     <div class="radio">
       <label><input type="radio" name="optradio">Major</label>
@@ -36,26 +20,41 @@
     <div class="radio">
       <label><input type="radio" name="optradio">Minor</label>
     </div>
-    <div class="piano">
-        <img src="img/white-left.png" class="keys" id="c4" value="C#4">
-        <img src="img/white-center-2.png" class="keys" id="cB4" value="D4">
-        <img src="img/white-right.png" class="keys" id="e4" value="D4">
-        <img src="img/white-left.png" class="keys" id="f4" value="D4">
-        <img src="img/white-center-2.png" class="keys" id="" value="D4">
-        <img src="img/white-center-2.png" class="keys" id="kb-a4" value="D4">
-        <img src="img/white-right.png" class="keys" id="kb-b4" value="D4">
-        <img src="img/white-left.png" class="keys" id="kb-c5" value="D4">
-        <img src="img/white-center-2.png" class="keys" id="kb-d5" value="D4">
-        <img src="img/white-right.png" class="keys" id="kb-e5" value="D4">
-        <img src="img/white-left.png" class="keys" id="kb-f5" value="D4">
-        <img src="img/white-center-2.png" class="keys" id="kb-g5" value="D4">
-        <img src="img/white-center-2.png" class="keys" id="kb-a5" value="D4">
-        <img src="img/white-right.png" class="keys" id="kb-a5" value="D4">
-      </div>
->>>>>>> 2e167b4aee0f8d82388d7cbb3a850c06d9ee6581
-        <!-- <img src="img/black-key.png" id="kb-black-csharp"><img src="img/black-key.png" id="kb-black-dsharp"> -->
+    <div id="piano">
+        <ol id="leftHalf">
+          <li class="ivory" id="C">C</li>
+          <li class="ebony" id="Cs">C#</li>
+          <li class="ivory" id="D">D</li>
+          <li class="ebony" id="Ds">D#</li>
+          <li class="ivory" id="E">E</li>
+          <li class="ivory" id="F">F</li>
+          <li class="ebony" id="Fs">F#</li>
+          <li class="ivory" id="G">G</li>
+          <li class="ebony" id="Gs">G#</li>
+          <li class="ivory" id="A">A</li>
+          <li class="ebony" id="As">A#</li>
+          <li class="ivory" id="B">B</li>
+
+        </ol>
+
+        <ol id="rightHalf">
+          <li class="ivory" id="C1">C</li>
+          <li class="ebony" id="C1s">C#</li>
+          <li class="ivory" id="D1">D</li>
+          <li class="ebony" id="D1s">D#</li>
+          <li class="ivory" id="E1">E</li>
+          <li class="ivory" id="F1">F</li>
+          <li class="ebony" id="F1s">F#</li>
+          <li class="ivory" id="G1">G</li>
+          <li class="ebony" id="G1s">G#</li>
+          <li class="ivory" id="A1">A</li>
+          <li class="ebony" id="A1s">A#</li>
+          <li class="ivory" id="B1">B</li>
+        </ol>
+        <!-- <img src="img/black-key.png" id="black-csharp"><img src="img/black-key.png" id="black-dsharp"> -->
       <div id="results">
         <div class="c">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>C</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -68,9 +67,10 @@
             <p class="minor">Minor</p>
               <img src="img/cminor.png" class="cminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="csharp">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>C#/D♭</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -83,9 +83,10 @@
             <p class="minor">Minor</p>
               <img src="img/csharpminor.png" class="csharpminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="d">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>D</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -98,9 +99,10 @@
             <p class="minor">Minor</p>
               <img src="img/dminor.png" class="dminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgreybasic button">Hear Pitch</button>
         </div>
         <div class="dsharp">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>D#/E♭</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -113,9 +115,10 @@
             <p class="minor">Minor</p>
               <img src="img/dsharpminor.png" class="dsharpminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="e">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>E</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -128,9 +131,10 @@
             <p class="minor">Minor</p>
               <img src="img/eminor.png" class="eminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="f">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>F</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -143,9 +147,10 @@
             <p class="minor">Minor</p>
               <img src="img/fminor.png" class="fminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="fsharp">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>F#/G♭</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -158,9 +163,10 @@
             <p class="minor">Minor</p>
               <img src="img/fsharpminor.png" class="fsharpminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="g">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>G</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -173,9 +179,10 @@
             <p class="minor">Minor</p>
               <img src="img/gminor.png" class="gminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
-        <div class="ab">
+        <div class="aflat">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>G♯/A♭</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -188,9 +195,10 @@
             <p class="minor">Minor</p>
               <img src="img/abminor.png" class="abminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="a">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>A</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -203,9 +211,10 @@
             <p class="minor">Minor</p>
               <img src="img/aminor.png" class="aminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="asharp">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>A#/B♭</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -218,9 +227,10 @@
             <p class="minor">Minor</p>
               <img src="img/csharpmajor.png" class="asharpminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
         <div class="b">
+          <button class="ui lightgrey basic button close-button">Close</button>
           <h3>B</h3>
           <h4>Scales</h4>
             <p>Major</p>
@@ -233,7 +243,7 @@
             <p class="minor">Minor</p>
               <img src="img/bminor.png" class="bminorkey">
           <h4 class="chords">Chords</h4>
-          <button class="ui grey basic button">Hear Pitch</button>
+          <button class="ui lightgrey basic button">Hear Pitch</button>
         </div>
       </div>
     </div>
