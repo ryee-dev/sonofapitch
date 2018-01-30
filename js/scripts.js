@@ -3,4 +3,7 @@ $(document).ready(function() {
       $("#results").fadeToggle();
       $(".c").fadeToggle();
     });
+    $(".keys").click(function(){
+      ;
+    })
 });
