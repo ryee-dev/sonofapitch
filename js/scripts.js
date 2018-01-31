@@ -5,6 +5,23 @@ function Scale(root) {
   this.scaleArray = [];
 }
 
+function Info(root, scaleArray, outputArray, scaleImage) {
+  this.root = root;
+  this.scaleArray = scaleArray;
+  this.outputArray = outputArray;
+  this.scaleImage = scaleImage;
+}
+
+Info.prototype.scaleType = function() {
+  this.outputArray.concat(this.scaleArray);
+  return this.outputArray;
+}
+
+Info.prototype.addImage = function() {
+  this.scaleImage = "<img src=" + "img/" + keyPick + ".png>";
+  return this.scaleImage;
+}
+
 Scale.prototype.createMajorScaleArray = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
@@ -49,29 +66,42 @@ Scale.prototype.playScale = function(){
 
 $(document).ready(function() {
 
+  var majorScaleArray = [];
+  var minorScaleArray = [];
+  var keyPick = "";
+  var newScale = [];
+  var newInfo = [];
+  var sliderVal = "";
+
     $(".key").click(function() {
       $(".key").css("pointer-events", "none");
       $("#scaleList").empty();
-      var keyPick = ($(this).text());
-      var newScale = new Scale(keyPick);
-      var sliderVal = $("#major-minor").val();
+      keyPick = ($(this).text());
+      newScale = new Scale(keyPick);
+      newInfo = new Info(keyPick);
+      sliderVal = $("#major-minor").val();
 
       if (sliderVal === "1") {
         $("#scaleList").empty();
-        var majorScaleArray = newScale.createMajorScaleArray();
+        majorScaleArray = newScale.createMajorScaleArray();
         newScale.playScale();
         $("#scaleList").append("<p>" + majorScaleArray + "</p>");
+
         setTimeout(function() {
           $(".key").css("pointer-events", "auto");
         }, 2400);
+
       } else if (sliderVal === "3") {
         $("#scaleList").empty();
-        var minorScaleArray = newScale.createMinorScaleArray();
+        minorScaleArray = newScale.createMinorScaleArray();
         newScale.playScale();
+        $("#results").show();
         $("#scaleList").append("<p>" + minorScaleArray + "</p>");
+
         setTimeout(function() {
           $(".key").css("pointer-events", "auto");
         }, 2400);
+
       } else {
         playNote(keyPick);
         $(".key").css("pointer-events", "auto");
