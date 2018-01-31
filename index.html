@@ -8,60 +8,73 @@
   <link rel="stylesheet" href="css/styles.css">
   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="js/tone.js">
+  <script type="text/javascript" src="js/tone.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
-  </script>
 
   <meta charset="utf-8">
-  <title></title>
+  <title>Son of a Pitch</title>
 </head>
 
 <body>
-  <div class="container" id="header">
-    <img src="img/sonofapitch-logo.png" alt="logo" id="logo">
-  </div>
+  <div class="container">
+    <div class="piano">
+      <img src="img/logo-inverted.png" alt="logo" id="logo">
+      <div class="kb-toggles">
+        <div class="row" id="scale-heading">
+        <div class="col-md-3">
+          <h3><strong>Scale</strong></h3>
+        </div>
+        </div>
+        <div class="col-sm-1">
+          <p class="scale">Major</p>
+        </div>
+        <div class="col-sm-1">
+          <div class="slidecontainer">
+           <input type="range" min="1" max="3" value="2" class="slider" id="major-minor">
+         </div>
+        </div>
+        <div class="col-sm-1">
+          <p class="scale">Minor</p>
+        </div>
+        <div class="col-sm-9">
 
-  <div id="piano">
-    <ol id="key-list">
-      <li class="ivory key" id="C">C4</li>
-      <li class="ebony key" id="Cs">C#4</li>
-      <li class="ivory key" id="D">D4</li>
-      <li class="ebony key" id="Ds">D#4</li>
-      <li class="ivory key" id="E">E4</li>
-      <li class="ivory key" id="F">F4</li>
-      <li class="ebony key" id="Fs">F#4</li>
-      <li class="ivory key" id="G">G4</li>
-      <li class="ebony key" id="Gs">G#4</li>
-      <li class="ivory key" id="A">A4</li>
-      <li class="ebony key" id="As">A#4</li>
-      <li class="ivory key" id="B">B4</li>
-      <li class="ivory key" id="C1">C5</li>
-      <li class="ebony key" id="C1s">C#5</li>
-      <li class="ivory key" id="D1">D5</li>
-      <li class="ebony key" id="D1s">D#5</li>
-      <li class="ivory key" id="E1">E5</li>
-      <li class="ivory key" id="F1">F5</li>
-      <li class="ebony key" id="F1s">F#5</li>
-      <li class="ivory key" id="G1">G5</li>
-      <li class="ebony key" id="G1s">G#5</li>
-      <li class="ivory key" id="A1">A5</li>
-      <li class="ebony key" id="A1s">A#5</li>
-      <li class="ivory key" id="B1">B5</li>
-
-    </ol>
-
-    <div class="container">
-      <div class="radio">
-        <label><input type="radio" name="optradio" id="major">Major</label>
+        </div>
       </div>
-      <div class="radio">
-        <label><input type="radio" name="optradio" id="minor">Minor</label>
-      </div>
+
+      <ol id="key-list">
+        <li class="ivory key" id="C">C4</li>
+        <li class="ebony key" id="Cs">C#4</li>
+        <li class="ivory key" id="D">D4</li>
+        <li class="ebony key" id="Ds">D#4</li>
+        <li class="ivory key" id="E">E4</li>
+        <li class="ivory key" id="F">F4</li>
+        <li class="ebony key" id="Fs">F#4</li>
+        <li class="ivory key" id="G">G4</li>
+        <li class="ebony key" id="Gs">G#4</li>
+        <li class="ivory key" id="A">A4</li>
+        <li class="ebony key" id="As">A#4</li>
+        <li class="ivory key" id="B">B4</li>
+        <li class="ivory key" id="C1">C5</li>
+        <li class="ebony key" id="C1s">C#5</li>
+        <li class="ivory key" id="D1">D5</li>
+        <li class="ebony key" id="D1s">D#5</li>
+        <li class="ivory key" id="E1">E5</li>
+        <li class="ivory key" id="F1">F5</li>
+        <li class="ebony key" id="F1s">F#5</li>
+        <li class="ivory key" id="G1">G5</li>
+        <li class="ebony key" id="G1s">G#5</li>
+        <li class="ivory key" id="A1">A5</li>
+        <li class="ebony key" id="A1s">A#5</li>
+        <li class="ivory key" id="B1">B5</li>
+      </ol>
     </div>
 
-    <div id="scaleList">
+    <div class="scaleNotes">
+      <span id="scaleList"></span>
     </div>
-  </div>
+
+</div>
 </body>
 
 </html>

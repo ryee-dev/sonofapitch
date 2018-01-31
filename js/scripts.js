@@ -49,33 +49,41 @@ Scale.prototype.playScale = function(){
 
 $(document).ready(function() {
 
-
-  $(".key").click(function() {
-    $(".key").css("pointer-events", "none");
-    $("#scaleList").empty();
-    var keyPick = ($(this).text());
-    var newScale = new Scale(keyPick);
-    if ($("#major").is(":checked")){
+    $(".key").click(function() {
+      $(".key").css("pointer-events", "none");
       $("#scaleList").empty();
-      var majorScaleArray = newScale.createMajorScaleArray();
-      newScale.playScale();
-      $("#scaleList").append("<p>" + majorScaleArray + "</p>");
-      setTimeout(function() {
-        $(".key").css("pointer-events", "auto");
-      }, 2400);
-    } else if ($("#minor").is(":checked")){
-      $("#scaleList").empty();
-      var minorScaleArray = newScale.createMinorScaleArray();
-      newScale.playScale();
-      $("#scaleList").append("<p>" + minorScaleArray + "</p>");
-      setTimeout(function() {
-        $(".key").css("pointer-events", "auto");
-      }, 2400);
-    } else {
-      playNote(keyPick);
-      $(".key").css("pointer-events", "auto");
-    }
+      var keyPick = ($(this).text());
+      var newScale = new Scale(keyPick);
+      var sliderVal = $("#major-minor").val();
 
+      if (sliderVal === "1") {
+        $("#scaleList").empty();
+        var majorScaleArray = newScale.createMajorScaleArray();
+        newScale.playScale();
+        $("#scaleList").append("<p>" + majorScaleArray + "</p>");
+        setTimeout(function() {
+          $(".key").css("pointer-events", "auto");
+        }, 2400);
+      } else if (sliderVal === "3") {
+        $("#scaleList").empty();
+        var minorScaleArray = newScale.createMinorScaleArray();
+        newScale.playScale();
+        $("#scaleList").append("<p>" + minorScaleArray + "</p>");
+        setTimeout(function() {
+          $(".key").css("pointer-events", "auto");
+        }, 2400);
+      } else {
+        playNote(keyPick);
+        $(".key").css("pointer-events", "auto");
+      }
 
-  });
+      console.log(sliderVal);
+
+    });
+
+    // $('.slider').slick({
+    //   infinite: false,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 2
+
 });
