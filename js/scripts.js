@@ -5,6 +5,75 @@ function Scale(root) {
   this.scaleArray = [];
 }
 
+Scale.prototype.createSongOne = function() {
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+}
+
+Scale.prototype.createSongTwo = function() {
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+}
+
+Scale.prototype.createSongThree = function() {
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
+}
+
+
 Scale.prototype.createMajorScaleArray = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
@@ -32,18 +101,23 @@ Scale.prototype.createMinorScaleArray = function() {
 function playNote(note){
   var synth = new Tone.Synth().toMaster()
   synth.triggerAttackRelease(note, '8n')
+  // /alert(note.replace("#", "sharp"));
 }
 
 Scale.prototype.playScale = function(){
   var delayInMilliseconds = 0;
   this.scaleArray.forEach(function(note){
-
     setTimeout(function() {
       playNote(note);
+      $("#"+(note.replace('#','s'))).toggleClass("highlight");
     }, delayInMilliseconds);
-
+    setTimeout(function() {
+      $("#"+(note.replace('#','s'))).toggleClass("highlight");
+    }, delayInMilliseconds + 350);  
     delayInMilliseconds += 300;
-
+    setTimeout(function() {
+      $(".key").css("pointer-events", "auto");
+    }, 2400);
   });
 }
 
@@ -57,27 +131,31 @@ $(document).ready(function() {
       var sliderVal = $("#major-minor").val();
 
       if (sliderVal === "1") {
-        $("#scaleList").empty();
-        var majorScaleArray = newScale.createMajorScaleArray();
-        newScale.playScale();
-        $("#scaleList").append("<p>" + majorScaleArray + "</p>");
-        setTimeout(function() {
-          $(".key").css("pointer-events", "auto");
-        }, 2400);
+          $("#scaleList").empty();
+          var majorScaleArray = newScale.createMajorScaleArray();
+          newScale.playScale();
+          $("#scaleList").append("<p>" + majorScaleArray + "</p>");
       } else if (sliderVal === "3") {
-        $("#scaleList").empty();
-        var minorScaleArray = newScale.createMinorScaleArray();
-        newScale.playScale();
-        $("#scaleList").append("<p>" + minorScaleArray + "</p>");
-        setTimeout(function() {
-          $(".key").css("pointer-events", "auto");
-        }, 2400);
+          $("#scaleList").empty();
+          var minorScaleArray = newScale.createMinorScaleArray();
+          newScale.playScale();
+          $("#scaleList").append("<p>" + minorScaleArray + "</p>");
+      } else if (sliderVal === "4") {
+          $("#scaleList").empty();
+          var createSongOne = newScale.createSongOne();
+          newScale.playScale();
+      } else if (sliderVal === "5") {
+          $("#scaleList").empty();
+          var createSongTwo = newScale.createSongTwo();
+          newScale.playScale();
+      } else if (sliderVal === "6") {
+          $("#scaleList").empty();
+          var createSongThree = newScale.createSongThree();
+          newScale.playScale();
       } else {
-        playNote(keyPick);
-        $(".key").css("pointer-events", "auto");
+          playNote(keyPick);
+          $(".key").css("pointer-events", "auto");
       }
-
-      console.log(sliderVal);
 
     });
 

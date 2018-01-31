@@ -123,29 +123,24 @@ li:active {
   border-color: #837F7C;
   border-bottom-color: #837F7C;
 
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #161616, #000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #161616, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 
+}
+
+.ebony:active, .ivory:active {
+  background: linear-gradient(to bottom, #da4453, #89216b);
 }
 
 .ebony:hover {
   color: white;
 }
 
-.ebony:active {
-  border-bottom-width: 8px;
-  box-shadow: none;
-}
 
 .ivory:hover {
   color: black;
 }
 
-.ivory:active {
-  border-bottom-width: 8px;
-  box-shadow: white;
-}
+
 
 .radio {
   font-size: 24px;
@@ -205,4 +200,8 @@ li:active {
 
 
 
+}
+
+.highlight{
+  background: linear-gradient(to bottom, #005aa7, #fffde4);
 }
