@@ -33,11 +33,17 @@ function playNote(note){
   synth.triggerAttackRelease(note, '8n')
 }
 
-Scale.prototype.playScale function(){
+Scale.prototype.playScale = function(){
+  var delayInMilliseconds = 0;
   this.scaleArray.forEach(function(note){
-    playNote(note);
 
-  })
+    setTimeout(function() {
+      playNote(note);
+    }, delayInMilliseconds);
+
+    delayInMilliseconds += 300;
+
+  });
 }
 
 $(document).ready(function() {
@@ -55,6 +61,7 @@ $(document).ready(function() {
     } else if ($("#minor").is(":checked")){
       $("#scaleList").empty();
       var minorScaleArray = newScale.createMinorScaleArray();
+      newScale.playScale();
       $("#scaleList").append("<p>" + minorScaleArray + "</p>");
     } else {
       playNote(keyPick);
