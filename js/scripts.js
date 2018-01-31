@@ -21,10 +21,11 @@ Scale.prototype.createMinorScaleArray = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 6]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 9]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 8]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 10]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 12]);
   return this.scaleArray;
 }
 
@@ -50,6 +51,7 @@ $(document).ready(function() {
 
 
   $(".key").click(function() {
+    $(".key").css("pointer-events", "none");
     $("#scaleList").empty();
     var keyPick = ($(this).text());
     var newScale = new Scale(keyPick);
@@ -58,13 +60,22 @@ $(document).ready(function() {
       var majorScaleArray = newScale.createMajorScaleArray();
       newScale.playScale();
       $("#scaleList").append("<p>" + majorScaleArray + "</p>");
+      setTimeout(function() {
+        $(".key").css("pointer-events", "auto");
+      }, 2400);
     } else if ($("#minor").is(":checked")){
       $("#scaleList").empty();
       var minorScaleArray = newScale.createMinorScaleArray();
       newScale.playScale();
       $("#scaleList").append("<p>" + minorScaleArray + "</p>");
+      setTimeout(function() {
+        $(".key").css("pointer-events", "auto");
+      }, 2400);
     } else {
       playNote(keyPick);
+      $(".key").css("pointer-events", "auto");
     }
+
+
   });
 });
