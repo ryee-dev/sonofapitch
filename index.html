@@ -18,11 +18,11 @@
 
 <body>
   <div class="container" id="header">
-    <h1><img src="img/treble.png" class="treble">on of a <img src="img/p.png" class="pitch">itch</h1>
+    <img src="img/sonofapitch-logo.png" alt="logo" id="logo">
   </div>
 
   <div id="piano">
-    <ol id="leftHalf">
+    <ol id="key-list">
       <li class="ivory key" id="C">C4</li>
       <li class="ebony key" id="Cs">C#4</li>
       <li class="ivory key" id="D">D4</li>
@@ -35,8 +35,6 @@
       <li class="ivory key" id="A">A4</li>
       <li class="ebony key" id="As">A#4</li>
       <li class="ivory key" id="B">B4</li>
-    </ol>
-    <ol id="rightHalf">
       <li class="ivory key" id="C1">C5</li>
       <li class="ebony key" id="C1s">C#5</li>
       <li class="ivory key" id="D1">D5</li>
@@ -49,7 +47,9 @@
       <li class="ivory key" id="A1">A5</li>
       <li class="ebony key" id="A1s">A#5</li>
       <li class="ivory key" id="B1">B5</li>
+
     </ol>
+
     <div class="container">
       <div class="radio">
         <label><input type="radio" name="optradio" id="major">Major</label>
@@ -58,15 +58,8 @@
         <label><input type="radio" name="optradio" id="minor">Minor</label>
       </div>
     </div>
+
     <div id="scaleList">
-    </div>
-    <div id="results">
-      <div class="c">
-        <button class="ui lightgrey basic button close-button">Close</button>
-      </div>
-      <div>
-        <button class="ui lightgrey basic button">Hear Pitch</button>
-      </div>
     </div>
   </div>
 </body>
