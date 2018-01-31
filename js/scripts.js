@@ -124,55 +124,148 @@ Scale.prototype.playScale = function(){
 $(document).ready(function() {
   $(document).keydown(function(keyPressed) {
     if (keyPressed.keyCode == 65) {
+      $("#C4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#C4").removeClass("highlight");
+      },200);
     playNote("C4");
-    $("#C4").classToggle("highlight");
     } else if (keyPressed.keyCode == 68) {
+      $("#E4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#E4").removeClass("highlight");
+     },200);
     playNote("E4");
     }  else if (keyPressed.keyCode == 83) {
+      $("#D4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#D4").removeClass("highlight");
+     },200);
     playNote("D4");
-    } else if (keyPressed.keyCode == 68) {
-    playNote("E4");
     } else if (keyPressed.keyCode == 70) {
+      $("#F4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#F4").removeClass("highlight");
+     },200);
     playNote("F4");
     } else if (keyPressed.keyCode == 71) {
+      $("#G4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#G4").removeClass("highlight");
+     },200);
     playNote("G4");
     } else if (keyPressed.keyCode == 72) {
+      $("#A4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#A4").removeClass("highlight");
+     },200);
     playNote("A4");
     } else if (keyPressed.keyCode == 74) {
+      $("#B4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#B4").removeClass("highlight");
+     },200);
     playNote("B4");
     } else if (keyPressed.keyCode == 75) {
+      $("#C5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#C5").removeClass("highlight");
+     },200);
     playNote("C5");
     } else if (keyPressed.keyCode == 76) {
+      $("#D5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#D5").removeClass("highlight");
+     },200);
     playNote("D5");
     } else if (keyPressed.keyCode == 186) {
+      $("#E5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#E5").removeClass("highlight");
+     },200);
     playNote("E5");
     } else if (keyPressed.keyCode == 222) {
+      $("#F5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#F5").removeClass("highlight");
+     },200);
     playNote("F5");
     } else if (keyPressed.keyCode == 13) {
+      $("#G5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#G5").removeClass("highlight");
+     },200);
     playNote("G5");
     } else if (keyPressed.keyCode == 191) {
+      $("#A5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#A5").removeClass("highlight");
+     },200);
     playNote("A5");
     } else if (keyPressed.keyCode == 16) {
+      $("#B5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#B5").removeClass("highlight");
+     },200);
     playNote("B5");
     } else if (keyPressed.keyCode == 87) {
+      $("#Cs4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Cs4").removeClass("highlight");
+     },200);
     playNote("C#4");
     }  else if (keyPressed.keyCode == 69) {
+      $("#Ds4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Ds4").removeClass("highlight");
+     },200);
     playNote("D#4");
     } else if (keyPressed.keyCode == 82) {
+      $("#Fs4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Fs4").removeClass("highlight");
+     },200);
     playNote("F#4");
     } else if (keyPressed.keyCode == 84) {
+      $("#Gs4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Gs4").removeClass("highlight");
+     },200);
     playNote("G#4");
     } else if (keyPressed.keyCode == 89) {
+      $("#As4").toggleClass("highlight");
+      setTimeout(function () {
+       $("#As4").removeClass("highlight");
+     },200);
     playNote("A#4");
     } else if (keyPressed.keyCode == 85) {
+      $("#Cs5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Cs5").removeClass("highlight");
+     },200);
     playNote("C#5");
     } else if (keyPressed.keyCode ==73) {
+      $("#Ds5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Ds5").removeClass("highlight");
+     },200);
     playNote("D#5");
     } else if (keyPressed.keyCode == 79) {
+      $("#Fs5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Fs5").removeClass("highlight");
+     },200);
     playNote("F#5");
     } else if (keyPressed.keyCode == 80) {
+      $("#Gs5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#Gs5").removeClass("highlight");
+     },200);
     playNote("G#5");
     } else if (keyPressed.keyCode == 219) {
+      $("#As5").toggleClass("highlight");
+      setTimeout(function () {
+       $("#As5").removeClass("highlight");
+     },200);
     playNote("A#5");
     }
     });
