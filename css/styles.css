@@ -221,3 +221,11 @@ li:active {
   border: 0;
 
 }
+
+.highlight{
+  background: linear-gradient(to bottom, #005aa7, #fffde4);
+}
+
+.ebony:active, .ivory:active {
+  background: linear-gradient(to bottom, #da4453, #89216b);
+}
