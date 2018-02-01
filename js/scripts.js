@@ -121,7 +121,9 @@ Scale.prototype.playScale = function(){
   });
 }
 
+
 $(document).ready(function() {
+  var map = {68: false, 65: false, 71: false, 74:false, 76: false, 75: false, 186:false, 13:false};
   $(document).keydown(function(keyPressed) {
     if (keyPressed.keyCode == 65) {
       $("#C4").toggleClass("highlight");
@@ -267,8 +269,23 @@ $(document).ready(function() {
        $("#As5").removeClass("highlight");
      },200);
     playNote("A#5");
-    }
+  }
     });
+  $(document).keydown(function(chord) {
+
+    if(chord.keyCode in map){
+      map[chord.keyCode]=true;
+      }
+  }).keyup(function(chord) {
+      if ((map[68] && map[65] && map[71]) || (map[13] && map[75] && map[186])){
+        $(".cmajor").fadeIn();
+      } else if (map[74] && map[71] && map[76]){
+        $(".gmajor").fadeIn();
+      }
+      map[chord.keyCode]=false;
+      $(".chords").fadeOut(1500);
+});
+
 
 
     $(".key").click(function() {
@@ -312,5 +329,4 @@ $(document).ready(function() {
     //   infinite: false,
     //   slidesToShow: 1,
     //   slidesToScroll: 2
-
-});
+  });

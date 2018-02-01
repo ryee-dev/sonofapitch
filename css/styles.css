@@ -7,6 +7,7 @@ h1 {
 h3  {
   font-family: 'Iceland', cursive;
   font-size: 28px;
+  text-align: center;
 }
 
 p {
@@ -31,35 +32,47 @@ label {
 ol {
   position: relative;
   display: inline-block;
-  margin-top: 15px;
-  width: 120%;
+  width: 100%;
 }
 
 input {
   font-size: 18px;
 }
 
-.scale {
-  position: relative;
+.c, .csharp, .d, .dsharp, .e, .f, .fsharp, .g, .aflat, .a, .asharp, .b {
+ display:none;
+
+}
+
+#scale-heading {
+  width: 14.5%;
   color: white;
-  font-size: 20px;
-  margin-top: -10px;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
-.col-sm-2 {
-  width: 100px;
-  margin-left: -27px;
+#scale-label {
+  color: white;
 }
 
-.col-sm-1 {
-  margin-top: -25px;
-  padding-bottom: 15px;
+#results {
+  display: none;
 }
 
-.piano {
+.scale {
+  display: inline-block;
+  color: white;
+  margin-top: 25px;
+}
+
+#scaleList {
+  font-size: 28px;
+}
+
+.piano#primary {
   position: relative;
   width: 100%;
-  height: 835px;
+  height: 750px;
   display: block;
   margin: auto;
   border-radius: 20px;
@@ -71,25 +84,28 @@ input {
   background: linear-gradient(to top, #2d2d2d, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#scales {
+  overflow: auto;
+  margin-top: -100px;
+  margin-left: 25px;
+}
+
 #key-list {
   position: relative;
-  margin-left: -135px;
-  margin-top: 27px;
+  margin-left: -40px;
+  margin-top: 50px;
   z-index: 2;
 }
 
-#logo {
-  width: 350px;
-  height: 350px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+#key-toggles {
+  margin-top: -40px;
 }
 
-#scale-heading {
-  position: relative;
-  color: white;
-  padding-bottom: 45px;
-  margin-left: -27px;
+.logo#main {
+  width: 350px;
+  height: 350px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 li {
@@ -123,49 +139,55 @@ li:active {
   border-color: #837F7C;
   border-bottom-color: #837F7C;
 
-  
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #161616, #000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #161616, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-}
-
-.ebony:active, .ivory:active {
-  background: linear-gradient(to bottom, #da4453, #89216b);
 }
 
 .ebony:hover {
   color: white;
 }
 
+.ebony:active {
+  border-bottom-width: 8px;
+  box-shadow: none;
+}
 
 .ivory:hover {
   color: black;
 }
 
-
+.ivory:active {
+  border-bottom-width: 8px;
+  box-shadow: white;
+}
 
 .radio {
   font-size: 24px;
   display: inline-flex;
 }
 
-.kb-toggles {
+.kb-toggles#primary {
   position: relative;
-  padding-top: 35px;
-  margin-left: 25px;
   margin-top: -40px;
+  padding-bottom: -50px;
 }
 
 /* Slide toggle switch */
 
-.slidecontainer {
+.slidecontainer#primary {
   position: relative;
-  width: 100px;
-  margin-left: 0px;
-  margin-top: -15px;
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 100px;
+    width: 50%;
     height: 10px;
     border-radius: 5px;
     background: #d3d3d3;
@@ -191,17 +213,24 @@ li:active {
 }
 
 .slider::-moz-range-thumb {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   background-image: url('steel-button.png');
   background-repeat: no-repeat;
   cursor: pointer;
   border: 0;
 
-
-
 }
 
 .highlight{
   background: linear-gradient(to bottom, #005aa7, #fffde4);
+}
+
+.ebony:active, .ivory:active {
+  background: linear-gradient(to bottom, #da4453, #89216b);
+}
+
+.cmajor, .gmajor {
+  display:none;
+  color:white;
 }

@@ -17,32 +17,26 @@
 
 <body>
   <div class="container">
-    <div class="piano">
-      <img src="img/logo-inverted.png" alt="logo" id="logo">
-      <div class="kb-toggles">
-        <div class="row" id="scale-heading">
-          <div class="col-md-3">
-            <h3>Scale</h3>
-          </div>
-        </div>
+    <div class="piano" id="primary">
+      <img src="img/logo-inverted.png" alt="logo" class="logo" id="main">
+      <div class="chords">
+        <span class="cmajor">C Major Chord<span>
+          <span class="gmajor">G Major Chord<span>
+      </div>
+      <div class="kb-toggles" id="primary">
         <div class="row">
-          <div class="col-sm-1">
-            <p class="scale">Major</p>
-          </div>
-          <div class="col-sm-2">
-            <div class="slidecontainer">
-             <input type="range" min="1" max="6" value="2" class="slider" id="major-minor">
-           </div>
-          </div>
-          <div class="col-sm-1">
-            <p class="scale">Minor</p>
-          </div>
-          <div class="col-sm-9">
+          <div class="col-md-3" id="scales">
+            <h3><span id="scale-label">Scale</span></h3>
+            <span class="scale" id="major">Major</span>
+            <div class="slidecontainer" id="primary">
+               <input type="range" min="1" max="3" value="2" class="slider" id="major-minor">
+            </div>
+            <span class="scale" id="minor">Minor</span>
 
           </div>
+
         </div>
       </div>
-
       <ol id="key-list">
         <li class="ivory key" id="C4">C4</li>
         <li class="ebony key" id="Cs4">C#4</li>
@@ -70,9 +64,10 @@
         <li class="ivory key" id="B5">B5</li>
       </ol>
     </div>
+  </div>
 
-    <div class="scaleNotes">
-      <span id="scaleList"></span>
+    <div id="results">
+      <span class="scaleList"></span>
     </div>
 
   </div>
