@@ -125,6 +125,18 @@ $(document).ready(function() {
   var theSynth = new Tone.Synth().toMaster();
   var sliderVal = $(".knob").val();
 
+  $("button").click(function(){
+    if ($(this).val() === "AMSynth"){
+      theSynth = new Tone.AMSynth().toMaster();
+    }else if ($(this).val() === "FMSynth"){
+      theSynth = new Tone.PluckSynth().toMaster();
+    }else if ($(this).val() === "PolySynth"){
+      theSynth = new Tone.PolySynth().toMaster();
+    }
+
+
+  });
+
   $(document).keydown(function(keyPressed) {
     if (keyPressed.keyCode == 90) {
       $("#C4").toggleClass("highlight");
@@ -280,18 +292,21 @@ $(document).ready(function() {
     });
 
     $(".key").click(function() {
+      var sliderVal = $(".knob[type='radio'][name='radio-choice']:checked").val();
       $(".key").css("pointer-events", "none");
       $("#scaleList").empty();
       var keyPick = ($(this).text());
       var newScale = new Scale(keyPick);
-
       if (sliderVal === "Major") {
+          $("#results").empty();
           $("#results").show();
-          $("#results").append("<img src='img/scales/majorScales/" + keyPick + ".png'>");
+          $("#results").append("<img src='img/scales/majorScales/" + keyPick.replace(/[0-9]/g, "").replace('#', 's') + ".png'>");
           var majorScaleArray = newScale.createMajorScaleArray();
           newScale.playScale(theSynth);
       } else if (sliderVal === "Minor") {
-          $("#scaleList").empty();
+          $("#results").empty();
+          $("#results").empty();
+          $("#results").append("<img src='img/scales/minorScales/" + keyPick.replace(/[0-9]/g, "").replace('#', 's') + ".png'>");
           var minorScaleArray = newScale.createMinorScaleArray();
           newScale.playScale(theSynth);
           $("#scaleList").append("<p>" + minorScaleArray + "</p>");
@@ -343,17 +358,6 @@ $(document).ready(function() {
       return style;
     }
 
-    $rangeInput.on('input', function () {
-      sheet.textContent = getTrackStyle(this);
-    });
-
-    // Change input value on label click
-    $('.range-labels li').on('click', function () {
-      var index = $(this).index();
-
-      $rangeInput.val(index + 1).trigger('input');
-
-    });
 
     // $('.slider').slick({
     //   infinite: false,
