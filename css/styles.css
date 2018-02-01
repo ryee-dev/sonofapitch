@@ -30,7 +30,6 @@ label {
 ol {
   position: relative;
   display: inline-block;
-  width: 100%;
 }
 
 input {
@@ -71,12 +70,15 @@ input {
 .piano {
   position: relative;
   width: 100%;
-  height: 675px;
+  height: 610px;
   display: block;
   margin-top: 50px;
   border-radius: 17px;
   z-index: 1;
-  background-image: url("../img/gradient-2.png");
+  background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #000, #7d7d7d);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #000, #7d7d7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #scales {
@@ -88,9 +90,13 @@ input {
 #key-list {
   position: relative;
   margin: auto;
+  width: 98%;
+  height: 50%;
   display: inline-block;
   top: -75px;
   z-index: 2;
+  padding: 0px;
+  border-radius: 0px 0px 15px 15px;
 }
 
 #scale-toggle {
@@ -111,11 +117,13 @@ li {
   position: relative;
   background-image: url("../img/ivory.png");
   z-index: 1;
-  padding: 225px 22px 50px;
+  padding: 270px 23px 0px;
   display: inline-block;
   margin: auto;
   border: 1px solid #ccc;
   font-size: 20px;
+  margin-bottom: -15px;
+  margin-top: 2px;
   margin-right: -1px;
   margin-left: -2px;
   border-radius: 0px 0px 7px 7px;
@@ -131,7 +139,7 @@ li:active {
   position: absolute;
   z-index: 2;
   background-color: #1d1d1d;
-  padding: 145px 6px 12px;
+  padding: 162px 8px 0px;
   top: 0px;
   margin-left: -31px;
   box-shadow: none;
@@ -148,7 +156,7 @@ li:active {
 }
 
 .ebony:active {
-  border-bottom-width: 8px;
+  border-bottom-width: -2px;
   box-shadow: none;
 }
 
@@ -157,7 +165,7 @@ li:active {
 }
 
 .ivory:active {
-  border-bottom-width: 8px;
+  border-bottom-width: 0px;
   box-shadow: white;
 }
 
