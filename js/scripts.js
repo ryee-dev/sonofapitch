@@ -5,6 +5,7 @@ function Scale(root) {
   this.scaleArray = [];
 }
 
+
 Scale.prototype.createSongOne = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
@@ -277,12 +278,11 @@ $(document).ready(function() {
       var keyPick = ($(this).text());
       var newScale = new Scale(keyPick);
       var sliderVal = $("#major-minor").val();
-
+      
       if (sliderVal === "2") {
-          $("#scaleList").empty();
+          $("#results").append(keyPick + ".png"
           var majorScaleArray = newScale.createMajorScaleArray();
           newScale.playScale(theSynth);
-          $("#scaleList").append("<p>" + majorScaleArray + "</p>");
       } else if (sliderVal === "3") {
           $("#scaleList").empty();
           var minorScaleArray = newScale.createMinorScaleArray();
@@ -296,7 +296,7 @@ $(document).ready(function() {
           $("#scaleList").empty();
           var createSongTwo = newScale.createSongTwo();
           newScale.playScale(theSynth);
-      } else if (sliderVal === "6") {
+      } else if (sliderVal === "5") {
           $("#scaleList").empty();
           var createSongThree = newScale.createSongThree();
           newScale.playScale(theSynth);
