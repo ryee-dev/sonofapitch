@@ -26,11 +26,11 @@
             <fieldset>
               <legend></legend>
 
-              <input type="radio" name="radio-choice" class="knob" id="radio-choice-1" value="Play" />
-              <label for="radio-choice-1">Play</label>
+              <input type="radio" name="radio-choice" class="knob" id="radio-choice-1" value="Major" />
+              <label for="radio-choice-1">Major</label>
 
-              <input type="radio" name="radio-choice" class="knob" id="radio-choice-2" value="Major" />
-              <label for="radio-choice-2">Major</label>
+              <input type="radio" name="radio-choice" class="knob" id="radio-choice-2" value="Play" />
+              <label for="radio-choice-2">Play</label>
 
               <input type="radio" name="radio-choice" class="knob" id="radio-choice-3" value="Minor" />
               <label for="radio-choice-3">Minor</label>
@@ -42,9 +42,9 @@
         </div>
         <div class="col-md-4">
           <div class="buttonHolder">
-            <a href="#" class="button tick"></a>
-            <a href="#" class="button heart"></a>
-            <a href="#" class="button flower"></a>
+            <button class="button tick" value="AMSynth"></button>
+            <button class="button heart" value="FMSynth"></button>
+            <button class="button flower" value="PolySynth"></button>
           </div>
         </div>
         <div class="col-md-4">
@@ -79,14 +79,21 @@
         <li class="ebony key" id="As5">A#5</li>
         <li class="ivory key" id="B5">B5</li>
         <li class="ivory key" id="C6">C6</li>
+
+      </div>
+
+      <div class="chords">
+        <div id="cmajor">C Major Chord</div>
+        <div id="gmajor">G Major Chord</div>
+        <div id="aminor">A Minor Chord</div>
+        <div id="fmajor">F Major Chord</div>
       </div>
 
     </div>
-  </div>
-
     <div id="results">
 
     </div>
+  </div>
 
 </body>
 
