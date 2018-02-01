@@ -122,8 +122,21 @@ Scale.prototype.playScale = function(synth){
 }
 
 $(document).ready(function() {
+  var map = {90: false, 67: false, 66: false, 188:false, 83:false, 77:false, 78:false, 68:false, 65:false, 86:false, 71:false};
   var theSynth = new Tone.Synth().toMaster();
   var sliderVal = $(".knob").val();
+
+  $("button").click(function(){
+    if ($(this).val() === "AMSynth"){
+      theSynth = new Tone.AMSynth().toMaster();
+    }else if ($(this).val() === "FMSynth"){
+      theSynth = new Tone.DuoSynth().toMaster();
+    }else if ($(this).val() === "PolySynth"){
+      theSynth = new Tone.PolySynth().toMaster();
+    }
+
+
+  });
 
   $(document).keydown(function(keyPressed) {
     if (keyPressed.keyCode == 90) {
@@ -279,19 +292,43 @@ $(document).ready(function() {
     }
     });
 
+    $(document).keydown(function(chord) {
+    if(chord.keyCode in map){
+      map[chord.keyCode]=true;
+      }
+    }).keyup(function(chord) {
+     if ((map[90] && map[67] && map[66])||(map[65] && map[68] && map[71])){
+        $("#cmajor").fadeIn();
+        $("#cmajor").fadeOut(1500);
+      } else if (map[66] && map[77] && map[83]){
+        $("#gmajor").fadeIn();
+        $("#gmajor").fadeOut(1500);
+      } else if ((map[78] && map[65] && map[68])||(map[78] && map[188] && map[68])){
+        $("#aminor").fadeIn();
+        $("#aminor").fadeOut(1500);
+      } else if ((map[86] && map[78] && map[188])||(map[86] && map[78] && map[65])){
+        $("#fmajor").fadeIn();
+        $("#fmajor").fadeOut(1500);
+      }
+      map[chord.keyCode]=false;
+    });
+
     $(".key").click(function() {
+      var sliderVal = $(".knob[type='radio'][name='radio-choice']:checked").val();
       $(".key").css("pointer-events", "none");
       $("#scaleList").empty();
       var keyPick = ($(this).text());
       var newScale = new Scale(keyPick);
-
       if (sliderVal === "Major") {
+          $("#results").empty();
           $("#results").show();
-          $("#results").append("<img src='img/scales/majorScales/" + keyPick + ".png'>");
+          $("#results").append("<img src='img/scales/majorScales/" + keyPick.replace(/[0-9]/g, "").replace('#', 's') + ".png'>");
           var majorScaleArray = newScale.createMajorScaleArray();
           newScale.playScale(theSynth);
       } else if (sliderVal === "Minor") {
-          $("#scaleList").empty();
+          $("#results").empty();
+          $("#results").empty();
+          $("#results").append("<img src='img/scales/minorScales/" + keyPick.replace(/[0-9]/g, "").replace('#', 's') + ".png'>");
           var minorScaleArray = newScale.createMinorScaleArray();
           newScale.playScale(theSynth);
           $("#scaleList").append("<p>" + minorScaleArray + "</p>");
@@ -343,17 +380,6 @@ $(document).ready(function() {
       return style;
     }
 
-    $rangeInput.on('input', function () {
-      sheet.textContent = getTrackStyle(this);
-    });
-
-    // Change input value on label click
-    $('.range-labels li').on('click', function () {
-      var index = $(this).index();
-
-      $rangeInput.val(index + 1).trigger('input');
-
-    });
 
     // $('.slider').slick({
     //   infinite: false,

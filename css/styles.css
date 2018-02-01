@@ -30,6 +30,7 @@ label {
 ol {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 input {
@@ -53,8 +54,10 @@ input {
 }
 
 #results img{
-  height:50%;
-  width: 70%;
+  height:60%;
+  width: 60%;
+  z-index: 2;
+  margin-top: 10px;
 }
 
 .scale {
@@ -70,15 +73,12 @@ input {
 .piano {
   position: relative;
   width: 100%;
-  height: 610px;
+  height: 630px;
   display: block;
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 17px;
   z-index: 1;
-  background: #bdc3c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #000, #7d7d7d);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #000, #7d7d7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-image: url("../img/gradient-2.png");
 }
 
 #scales {
@@ -90,13 +90,9 @@ background: linear-gradient(to bottom, #000, #7d7d7d); /* W3C, IE 10+/ Edge, Fir
 #key-list {
   position: relative;
   margin: auto;
-  width: 98%;
-  height: 50%;
   display: inline-block;
-  top: -75px;
+  top: -80px;
   z-index: 2;
-  padding: 0px;
-  border-radius: 0px 0px 15px 15px;
 }
 
 #scale-toggle {
@@ -117,13 +113,11 @@ li {
   position: relative;
   background-image: url("../img/ivory.png");
   z-index: 1;
-  padding: 270px 23px 0px;
+  padding: 225px 22px 50px;
   display: inline-block;
   margin: auto;
   border: 1px solid #ccc;
   font-size: 20px;
-  margin-bottom: -15px;
-  margin-top: 2px;
   margin-right: -1px;
   margin-left: -2px;
   border-radius: 0px 0px 7px 7px;
@@ -139,7 +133,7 @@ li:active {
   position: absolute;
   z-index: 2;
   background-color: #1d1d1d;
-  padding: 162px 8px 0px;
+  padding: 145px 6px 12px;
   top: 0px;
   margin-left: -31px;
   box-shadow: none;
@@ -156,7 +150,7 @@ li:active {
 }
 
 .ebony:active {
-  border-bottom-width: -2px;
+  border-bottom-width: 0px;
   box-shadow: none;
 }
 
@@ -366,7 +360,7 @@ body{
 }
 
 .buttonHolder{
-  margin: 80px auto;
+  margin: 135px 25px;
   width:400px;
 }
 
@@ -399,21 +393,21 @@ body{
 
 
 		.heart:after{
-			content: "⑃";
-			left: 21px;
-			top: 16px;
+			content: "☃";
+			left: 18px;
+			top: 18px;
 		}
 
 		.flower:after{
-			content: "⑂";
-			left: 23px;
-			top: 14px;
+			content: "☀";
+			left: 18px;
+			top: 18px;
 		}
 
 		.tick:after{
-			content: "⑁";
-			left:20px;
-			top:12px;
+			content: "☂";
+			left:18px;
+			top:18px;
 		}
 
 
@@ -444,8 +438,6 @@ body{
 			text-shadow:0px 0px 6px #eb2f2f;
 		}
 
-
-
 		.button:active{
 			background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
 			background-image: linear-gradient(top, #efedec, #f7f4f4);
@@ -456,3 +448,13 @@ body{
 			color:#dbd2d2;
 			text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
 		}
+
+    #cmajor, #gmajor, #aminor, #fmajor {
+      display:none;
+      color: white;
+    }
+
+    .chords {
+      margin-top: -70px;
+      font-size: 18px;
+    }
