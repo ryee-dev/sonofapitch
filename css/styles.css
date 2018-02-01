@@ -201,6 +201,7 @@ li:active {
     opacity: 1;
 }
 
+<<<<<<< HEAD
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -226,6 +227,23 @@ li:active {
   background: linear-gradient(to bottom, #005aa7, #fffde4);
 }
 
+<<<<<<< HEAD
 .ebony:active, .ivory:active {
   background: linear-gradient(to bottom, #da4453, #89216b);
+=======
+=======
+.pitch {
+  width:7%;
+  margin-left: -15px;
+  margin-right: 3px;
+  margin-top: 25px;
+}
+
+.header {
+  margin-bottom: 8em;
+  margin-top: -1em;
+  margin-left: -58px;
+  text-align: center;
+>>>>>>> 2a744dd0f5a40806eda0b09e193628a273ea5af5
+>>>>>>> 3ca9dd9d860bf73882e0d10b7bc60608992ad019
 }
