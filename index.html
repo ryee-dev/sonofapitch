@@ -18,23 +18,34 @@
 <body>
   <div class="container">
     <div class="piano" id="primary">
-      <img src="img/logo-inverted.png" alt="logo" class="logo" id="main">
-      <div class="kb-toggles" id="primary">
-        <div class="row">
-          <div class="col-md-3" id="scales">
-            <h3><span id="scale-label">Scale</span></h3>
-            <span class="scale" id="major">Major</span>
-            <div class="slidecontainer" id="primary">
-               <input type="range" min="1" max="6" value="1" class="slider" id="major-minor">
-            </div>
-            <span class="scale" id="minor">Minor</span>
-
-          </div>
-
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/speaker-grill.png" class="speaker" id="left">
+        </div>
+        <div class="col-md-4">
+          <img src="img/logo-inverted.png" id="logo">
+        </div>
+        <div class="col-md-4">
+          <img src="img/speaker-grill.png" class="speaker" id="right">
         </div>
       </div>
 
-      <ol id="key-list">
+      <br>
+
+      <div class="kb-toggles" id="primary">
+        <div class="row" id="scale-toggle">
+          <div class="toggleWrapper">
+              <input type="checkbox" class="dn" id="dn">
+              <label for="dn" class="toggle">
+                <span class="toggle__handler">
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+      <div id="key-list">
         <li class="ivory key" id="C4">C4</li>
         <li class="ebony key" id="Cs4">C#4</li>
         <li class="ivory key" id="D4">D4</li>
@@ -59,15 +70,14 @@
         <li class="ivory key" id="A5">A5</li>
         <li class="ebony key" id="As5">A#5</li>
         <li class="ivory key" id="B5">B5</li>
-      </ol>
+      </div>
+
     </div>
   </div>
 
     <div id="results">
-      
-    </div>
 
-  </div>
+    </div>
 
 </body>
 
