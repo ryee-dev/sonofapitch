@@ -55,8 +55,9 @@ input {
   color: white;
 }
 
-#results {
-  display: none;
+#results img{
+  height:50%;
+  width: 70%;
 }
 
 .scale {

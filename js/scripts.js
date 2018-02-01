@@ -280,7 +280,8 @@ $(document).ready(function() {
       var sliderVal = $("#major-minor").val();
       
       if (sliderVal === "2") {
-          $("#results").append(keyPick + ".png"
+          $("#results").show();
+          $("#results").append("<img src='img/scales/majorScales/" + keyPick + ".png'>");
           var majorScaleArray = newScale.createMajorScaleArray();
           newScale.playScale(theSynth);
       } else if (sliderVal === "3") {
