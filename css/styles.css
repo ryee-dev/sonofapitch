@@ -21,6 +21,9 @@ body {
   font-family: 'Raleway', cursive;
   margin: auto;
   background-image: url("../img/gradient-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 label {
@@ -54,8 +57,9 @@ input {
 }
 
 #results img{
-  height:50%;
-  width: 70%;
+  height:30%;
+  width: 30%;
+  margin-top: 20px;
 }
 
 .scale {
