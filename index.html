@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/background-style.css">
   <link rel="stylesheet" href="css/semantic.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Iceland|Raleway:400,600,700i" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
@@ -17,35 +18,38 @@
 
 <body>
   <div class="container">
-    <div class="piano" id="primary">
+
+    <div class="piano">
       <div class="row">
         <div class="col-md-4">
-          <img src="img/speaker-grill.png" class="speaker" id="left">
+          <form id="knob">
+            <fieldset>
+              <legend></legend>
+
+              <input type="radio" name="radio-choice" class="knob" id="radio-choice-1" value="choice-1" />
+              <label for="radio-choice-1">Major</label>
+
+              <input type="radio" name="radio-choice" class="knob" id="radio-choice-2" value="choice-2" />
+              <label for="radio-choice-2">Play</label>
+
+              <input type="radio" name="radio-choice" class="knob" id="radio-choice-3" value="choice-3" />
+              <label for="radio-choice-3">Minor</label>
+
+              <div class="dial">▲</div>
+
+            </fieldset>
+          </form>
+        </div>
+        <div class="col-md-4">
+
         </div>
         <div class="col-md-4">
           <img src="img/logo-inverted.png" id="logo">
         </div>
-        <div class="col-md-4">
-          <img src="img/speaker-grill.png" class="speaker" id="right">
-        </div>
       </div>
 
-      <br>
-
-      <div class="kb-toggles" id="primary">
-        <div class="row" id="scale-toggle">
-          <div class="toggleWrapper">
-              <input type="checkbox" class="dn" id="dn">
-              <label for="dn" class="toggle">
-                <span class="toggle__handler">
-                </span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-
       <div id="key-list">
+
         <li class="ivory key" id="C4">C4</li>
         <li class="ebony key" id="Cs4">C#4</li>
         <li class="ivory key" id="D4">D4</li>
@@ -70,6 +74,7 @@
         <li class="ivory key" id="A5">A5</li>
         <li class="ebony key" id="As5">A#5</li>
         <li class="ivory key" id="B5">B5</li>
+        <li class="ivory key" id="C6">C6</li>
       </div>
 
     </div>

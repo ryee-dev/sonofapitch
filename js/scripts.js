@@ -1,5 +1,5 @@
 function Scale(root) {
-  this.pianoKeyArray = ["C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4", "C5", "C#5", "D5", "D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5", "B5", "C6", "C#6", "D6", "D#6", "E6", "F6", "F#6", "G6", "G#6", "A6", "A#6", "B6"]
+  this.pianoKeyArray = ["C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4", "C5", "C#5", "D5", "D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5", "B5", "C6"];
   this.root = root;
   this.rootIndex = this.pianoKeyArray.indexOf(this.root);
   this.scaleArray = [];
@@ -123,146 +123,154 @@ Scale.prototype.playScale = function(synth){
 
 $(document).ready(function() {
   var theSynth = new Tone.Synth().toMaster();
+  var sliderVal = $(".knob").val();
+
   $(document).keydown(function(keyPressed) {
-    if (keyPressed.keyCode == 65) {
+    if (keyPressed.keyCode == 90) {
       $("#C4").toggleClass("highlight");
       setTimeout(function () {
        $("#C4").removeClass("highlight");
       },200);
     playNote("C4", theSynth);
-    } else if (keyPressed.keyCode == 68) {
+    } else if (keyPressed.keyCode == 88) {
+        $("#D4").toggleClass("highlight");
+        setTimeout(function () {
+         $("#D4").removeClass("highlight");
+       },200);
+      playNote("D4", theSynth);
+    } else if (keyPressed.keyCode == 67) {
       $("#E4").toggleClass("highlight");
       setTimeout(function () {
        $("#E4").removeClass("highlight");
-     },200);
+      },200);
     playNote("E4", theSynth);
-    }  else if (keyPressed.keyCode == 83) {
-      $("#D4").toggleClass("highlight");
-      setTimeout(function () {
-       $("#D4").removeClass("highlight");
-     },200);
-    playNote("D4", theSynth);
-    } else if (keyPressed.keyCode == 70) {
+  }  else if (keyPressed.keyCode == 86) {
       $("#F4").toggleClass("highlight");
       setTimeout(function () {
        $("#F4").removeClass("highlight");
      },200);
     playNote("F4", theSynth);
-    } else if (keyPressed.keyCode == 71) {
+  } else if (keyPressed.keyCode == 66) {
       $("#G4").toggleClass("highlight");
       setTimeout(function () {
        $("#G4").removeClass("highlight");
      },200);
     playNote("G4", theSynth);
-    } else if (keyPressed.keyCode == 72) {
+  } else if (keyPressed.keyCode == 78) {
       $("#A4").toggleClass("highlight");
       setTimeout(function () {
        $("#A4").removeClass("highlight");
      },200);
     playNote("A4", theSynth);
-    } else if (keyPressed.keyCode == 74) {
+  } else if (keyPressed.keyCode == 77) {
       $("#B4").toggleClass("highlight");
       setTimeout(function () {
        $("#B4").removeClass("highlight");
      },200);
     playNote("B4", theSynth);
-    } else if (keyPressed.keyCode == 75) {
+  } else if (keyPressed.keyCode == 188 || keyPressed.keyCode == 65) {
       $("#C5").toggleClass("highlight");
       setTimeout(function () {
        $("#C5").removeClass("highlight");
      },200);
     playNote("C5", theSynth);
-    } else if (keyPressed.keyCode == 76) {
+  } else if (keyPressed.keyCode == 83) {
       $("#D5").toggleClass("highlight");
       setTimeout(function () {
        $("#D5").removeClass("highlight");
      },200);
     playNote("D5", theSynth);
-    } else if (keyPressed.keyCode == 186) {
+  } else if (keyPressed.keyCode == 68) {
       $("#E5").toggleClass("highlight");
       setTimeout(function () {
        $("#E5").removeClass("highlight");
      },200);
     playNote("E5", theSynth);
-    } else if (keyPressed.keyCode == 222) {
+  } else if (keyPressed.keyCode == 70) {
       $("#F5").toggleClass("highlight");
       setTimeout(function () {
        $("#F5").removeClass("highlight");
      },200);
     playNote("F5", theSynth);
-    } else if (keyPressed.keyCode == 13) {
+  } else if (keyPressed.keyCode == 71) {
       $("#G5").toggleClass("highlight");
       setTimeout(function () {
        $("#G5").removeClass("highlight");
      },200);
     playNote("G5", theSynth);
-    } else if (keyPressed.keyCode == 191) {
+  } else if (keyPressed.keyCode == 72) {
       $("#A5").toggleClass("highlight");
       setTimeout(function () {
        $("#A5").removeClass("highlight");
      },200);
     playNote("A5", theSynth);
-    } else if (keyPressed.keyCode == 16) {
+  } else if (keyPressed.keyCode == 74) {
       $("#B5").toggleClass("highlight");
       setTimeout(function () {
        $("#B5").removeClass("highlight");
      },200);
     playNote("B5", theSynth);
-    } else if (keyPressed.keyCode == 87) {
+  } else if (keyPressed.keyCode == 81) {
       $("#Cs4").toggleClass("highlight");
       setTimeout(function () {
        $("#Cs4").removeClass("highlight");
      },200);
     playNote("C#4", theSynth);
-    }  else if (keyPressed.keyCode == 69) {
+  } else if (keyPressed.keyCode == 75) {
+      $("#C6").toggleClass("highlight");
+      setTimeout(function () {
+       $("#C6").removeClass("highlight");
+     },200);
+    playNote("C6", theSynth);
+  } else if (keyPressed.keyCode == 87) {
       $("#Ds4").toggleClass("highlight");
       setTimeout(function () {
        $("#Ds4").removeClass("highlight");
      },200);
     playNote("D#4", theSynth);
-    } else if (keyPressed.keyCode == 82) {
+  } else if (keyPressed.keyCode == 69) {
       $("#Fs4").toggleClass("highlight");
       setTimeout(function () {
        $("#Fs4").removeClass("highlight");
      },200);
     playNote("F#4", theSynth);
-    } else if (keyPressed.keyCode == 84) {
+  } else if (keyPressed.keyCode == 82) {
       $("#Gs4").toggleClass("highlight");
       setTimeout(function () {
        $("#Gs4").removeClass("highlight");
      },200);
     playNote("G#4", theSynth);
-    } else if (keyPressed.keyCode == 89) {
+  } else if (keyPressed.keyCode == 84) {
       $("#As4").toggleClass("highlight");
       setTimeout(function () {
        $("#As4").removeClass("highlight");
      },200);
     playNote("A#4", theSynth);
-    } else if (keyPressed.keyCode == 85) {
+  } else if (keyPressed.keyCode == 89) {
       $("#Cs5").toggleClass("highlight");
       setTimeout(function () {
        $("#Cs5").removeClass("highlight");
      },200);
     playNote("C#5", theSynth);
-    } else if (keyPressed.keyCode ==73) {
+  } else if (keyPressed.keyCode == 85) {
       $("#Ds5").toggleClass("highlight");
       setTimeout(function () {
        $("#Ds5").removeClass("highlight");
      },200);
     playNote("D#5", theSynth);
-    } else if (keyPressed.keyCode == 79) {
+  } else if (keyPressed.keyCode == 73) {
       $("#Fs5").toggleClass("highlight");
       setTimeout(function () {
        $("#Fs5").removeClass("highlight");
      },200);
     playNote("F#5", theSynth);
-    } else if (keyPressed.keyCode == 80) {
+  } else if (keyPressed.keyCode == 79) {
       $("#Gs5").toggleClass("highlight");
       setTimeout(function () {
        $("#Gs5").removeClass("highlight");
      },200);
     playNote("G#5", theSynth);
-    } else if (keyPressed.keyCode == 219) {
+  } else if (keyPressed.keyCode == 80) {
       $("#As5").toggleClass("highlight");
       setTimeout(function () {
        $("#As5").removeClass("highlight");
@@ -271,41 +279,79 @@ $(document).ready(function() {
     }
     });
 
-
     $(".key").click(function() {
       $(".key").css("pointer-events", "none");
       $("#scaleList").empty();
       var keyPick = ($(this).text());
       var newScale = new Scale(keyPick);
-      var sliderVal = $("#major-minor").val();
 
-      if (sliderVal === "2") {
+      if (sliderVal === "Major") {
           $("#results").show();
           $("#results").append("<img src='img/scales/majorScales/" + keyPick + ".png'>");
           var majorScaleArray = newScale.createMajorScaleArray();
           newScale.playScale(theSynth);
-      } else if (sliderVal === "3") {
+      } else if (sliderVal === "Minor") {
           $("#scaleList").empty();
           var minorScaleArray = newScale.createMinorScaleArray();
           newScale.playScale(theSynth);
           $("#scaleList").append("<p>" + minorScaleArray + "</p>");
-      } else if (sliderVal === "4") {
-          $("#scaleList").empty();
-          var createSongOne = newScale.createSongOne();
-          newScale.playScale(theSynth);
-      } else if (sliderVal === "5") {
-          $("#scaleList").empty();
-          var createSongTwo = newScale.createSongTwo();
-          newScale.playScale(theSynth);
-      } else if (sliderVal === "5") {
-          $("#scaleList").empty();
-          var createSongThree = newScale.createSongThree();
-          newScale.playScale(theSynth);
+      // } else if (sliderVal === "4") {
+      //     $("#scaleList").empty();
+      //     var createSongOne = newScale.createSongOne();
+      //     newScale.playScale(theSynth);
+      // } else if (sliderVal === "5") {
+      //     $("#scaleList").empty();
+      //     var createSongTwo = newScale.createSongTwo();
+      //     newScale.playScale(theSynth);
+      // } else if (sliderVal === "5") {
+      //     $("#scaleList").empty();
+      //     var createSongThree = newScale.createSongThree();
+      //     newScale.playScale(theSynth);
       } else {
           playNote(keyPick, theSynth);
           $(".key").css("pointer-events", "auto");
       }
 
+
+    });
+
+    var sheet = document.createElement('style'),
+      $rangeInput = $('.range input'),
+      prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
+
+    document.body.appendChild(sheet);
+
+    var getTrackStyle = function (el) {
+      var curVal = el.value,
+          val = (curVal - 1) * 16.666666667,
+          style = '';
+
+      // Set active label
+      $('.range-labels li').removeClass('active selected');
+
+      var curLabel = $('.range-labels').find('li:nth-child(' + curVal + ')');
+
+      curLabel.addClass('active selected');
+      curLabel.prevAll().addClass('selected');
+
+      // Change background gradient
+      for (var i = 0; i < prefs.length; i++) {
+        style += '.range {background: linear-gradient(to right, #37adbf 0%, #37adbf ' + val + '%, #fff ' + val + '%, #fff 100%)}';
+        style += '.range input::-' + prefs[i] + '{background: linear-gradient(to right, #37adbf 0%, #37adbf ' + val + '%, #b2b2b2 ' + val + '%, #b2b2b2 100%)}';
+      }
+
+      return style;
+    }
+
+    $rangeInput.on('input', function () {
+      sheet.textContent = getTrackStyle(this);
+    });
+
+    // Change input value on label click
+    $('.range-labels li').on('click', function () {
+      var index = $(this).index();
+
+      $rangeInput.val(index + 1).trigger('input');
 
     });
 
