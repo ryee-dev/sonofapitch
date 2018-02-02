@@ -73,7 +73,11 @@ input {
 .piano {
   position: relative;
   width: 100%;
+<<<<<<< HEAD
   height: 630px;
+=======
+  height: 675px;
+>>>>>>> 84c2d96aa28cc47ba4b27652cbd3b5b9c32d135b
   display: block;
   margin-top: 20px;
   border-radius: 17px;
@@ -150,7 +154,11 @@ li:active {
 }
 
 .ebony:active {
+<<<<<<< HEAD
   border-bottom-width: 0px;
+=======
+  border-bottom-width: 8px;
+>>>>>>> 84c2d96aa28cc47ba4b27652cbd3b5b9c32d135b
   box-shadow: none;
 }
 
@@ -159,7 +167,7 @@ li:active {
 }
 
 .ivory:active {
-  border-bottom-width: 0px;
+  border-bottom-width: 8px;
   box-shadow: white;
 }
 
