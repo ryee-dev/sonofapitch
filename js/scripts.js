@@ -130,11 +130,7 @@ $(document).ready(function() {
     if ($(this).val() === "AMSynth"){
       theSynth = new Tone.AMSynth().toMaster();
     }else if ($(this).val() === "FMSynth"){
-<<<<<<< HEAD
       theSynth = new Tone.DuoSynth().toMaster();
-=======
-      theSynth = new Tone.PluckSynth().toMaster();
->>>>>>> 84c2d96aa28cc47ba4b27652cbd3b5b9c32d135b
     }else if ($(this).val() === "PolySynth"){
       theSynth = new Tone.PolySynth().toMaster();
     }
