@@ -21,6 +21,8 @@ body {
   font-family: 'Raleway', cursive;
   margin: auto;
   background-image: url("../img/gradient-1.png");
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 label {
@@ -42,61 +44,37 @@ input {
 
 }
 
-#scale-heading {
-  width: 14.5%;
-  color: white;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-#scale-label {
-  color: white;
-}
-
 #results img{
-  height:60%;
-  width: 60%;
+  height:50%;
+  width: 50%;
   z-index: 2;
   margin-top: 10px;
 }
 
-.scale {
-  display: inline-block;
-  color: white;
-  margin-top: 25px;
-}
+.container {
+  height: 600px;
 
-#scaleList {
-  font-size: 28px;
 }
 
 .piano {
+  top: 85px;
   position: relative;
   width: 100%;
-  height: 630px;
+  height: 100%;
   display: block;
   margin-top: 20px;
   border-radius: 17px;
   z-index: 1;
   background-image: url("../img/gradient-2.png");
-}
-
-#scales {
-  overflow: auto;
-  margin-top: -100px;
-  margin-left: 25px;
+  box-shadow: -15px 15px 25px 5px rgba(0, 0, 0, .3), inset 0px 0px 0px 0px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
 }
 
 #key-list {
   position: relative;
   margin: auto;
   display: inline-block;
-  top: -80px;
+  top: -100px;
   z-index: 2;
-}
-
-#scale-toggle {
-  margin-top: 40px;
 }
 
 #logo{
@@ -174,6 +152,17 @@ li:active {
 
 .ebony:active, .ivory:active {
   background: linear-gradient(to bottom, #da4453, #89216b);
+}
+
+/* .note {
+  margin-top: 20px;
+} */
+
+#treble {
+  height: 30%;
+  width: 30%;
+  display: block;
+  margin: auto;
 }
 
 
@@ -350,18 +339,12 @@ input[type="radio"]:checked#radio-choice-3 ~ .dial::after {
   display: inline-block;
 }
 
-html, body{
-  min-height:100%;
-}
-
-body{
-  		background-image: -webkit-linear-gradient(top, #edecec, #cecbc9);
-			background-image: linear-gradient(top, #edecec, #cecbc9);
-}
-
 .buttonHolder{
-  margin: 135px 25px;
-  width:400px;
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 75px;
+  margin-right: 25px;
 }
 
 
@@ -369,12 +352,11 @@ body{
 			background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
 			background-image: linear-gradient(top, #f4f1ee, #fff);
 			border-radius: 50%;
-			box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
-			float:left;
-			height: 70px;
+			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+			height: 50px;
+      width: 50px;
 			margin: 0 30px 30px 0;
 			position: relative;
-			width: 70px;
 			-webkit-transition: all .1s linear;
 			transition: all .1s linear;
 		}
@@ -383,7 +365,7 @@ body{
 			color:#e9e6e4;
 			content: "";
 			display: block;
-			font-size: 30px;
+			font-size: 18px;
 			height: 30px;
 			text-decoration: none;
 			text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
@@ -394,20 +376,22 @@ body{
 
 		.heart:after{
 			content: "☃";
-			left: 18px;
-			top: 18px;
+			left: 10px;
+			top: 16px;
 		}
 
 		.flower:after{
 			content: "☀";
-			left: 18px;
-			top: 18px;
+      left:10px;
+			top:16px;
+      color: #f99e4e;
 		}
 
 		.tick:after{
 			content: "☂";
-			left:18px;
-			top:18px;
+			left:10px;
+			top:16px;
+      color: #83d244;
 		}
 
 
@@ -438,14 +422,14 @@ body{
 			text-shadow:0px 0px 6px #eb2f2f;
 		}
 
-		.button:active{
+		.heart:active{
 			background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
 			background-image: linear-gradient(top, #efedec, #f7f4f4);
 			box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
 		}
 
 		.button:active:after{
-			color:#dbd2d2;
+			color:#f99e4e;
 			text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
 		}
 
@@ -455,6 +439,7 @@ body{
     }
 
     .chords {
-      margin-top: -70px;
+      margin-top: 0px;
       font-size: 18px;
+      margin-right: 25px;
     }

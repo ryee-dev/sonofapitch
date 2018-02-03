@@ -123,16 +123,16 @@ Scale.prototype.playScale = function(synth){
 
 $(document).ready(function() {
   var map = {90: false, 67: false, 66: false, 188:false, 83:false, 77:false, 78:false, 68:false, 65:false, 86:false, 71:false};
-  var theSynth = new Tone.Synth().toMaster();
+  var theSynth = new Tone.PolySynth().toMaster();
   var sliderVal = $(".knob").val();
 
   $("button").click(function(){
-    if ($(this).val() === "AMSynth"){
-      theSynth = new Tone.AMSynth().toMaster();
-    }else if ($(this).val() === "FMSynth"){
-      theSynth = new Tone.DuoSynth().toMaster();
-    }else if ($(this).val() === "PolySynth"){
+    if ($(this).val() === "PolySynth") {
       theSynth = new Tone.PolySynth().toMaster();
+    } else if ($(this).val() === "FMSynth"){
+      theSynth = new Tone.DuoSynth().toMaster();
+    } else if ($(this).val() === "AMSynth"){
+      theSynth = new Tone.AMSynth().toMaster();
     }
 
 
@@ -332,18 +332,18 @@ $(document).ready(function() {
           var minorScaleArray = newScale.createMinorScaleArray();
           newScale.playScale(theSynth);
           $("#scaleList").append("<p>" + minorScaleArray + "</p>");
-      // } else if (sliderVal === "4") {
-      //     $("#scaleList").empty();
-      //     var createSongOne = newScale.createSongOne();
-      //     newScale.playScale(theSynth);
-      // } else if (sliderVal === "5") {
-      //     $("#scaleList").empty();
-      //     var createSongTwo = newScale.createSongTwo();
-      //     newScale.playScale(theSynth);
-      // } else if (sliderVal === "5") {
-      //     $("#scaleList").empty();
-      //     var createSongThree = newScale.createSongThree();
-      //     newScale.playScale(theSynth);
+      } else if (sliderVal === "4") {
+          $("#scaleList").empty();
+          var createSongOne = newScale.createSongOne();
+          newScale.playScale(theSynth);
+      } else if (sliderVal === "5") {
+          $("#scaleList").empty();
+          var createSongTwo = newScale.createSongTwo();
+          newScale.playScale(theSynth);
+      } else if (sliderVal === "5") {
+          $("#scaleList").empty();
+          var createSongThree = newScale.createSongThree();
+          newScale.playScale(theSynth);
       } else {
           playNote(keyPick, theSynth);
           $(".key").css("pointer-events", "auto");

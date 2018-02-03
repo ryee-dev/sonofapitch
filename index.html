@@ -18,7 +18,6 @@
 
 <body>
   <div class="container">
-
     <div class="piano">
       <div class="row">
         <div class="col-md-4">
@@ -41,10 +40,20 @@
           </form>
         </div>
         <div class="col-md-4">
-          <div class="buttonHolder">
-            <button class="button tick" value="AMSynth"></button>
-            <button class="button heart" value="FMSynth"></button>
-            <button class="button flower" value="PolySynth"></button>
+          <div class="row">
+            <div class="buttonHolder">
+              <button class="button tick" value="PolySynth"></button>
+              <button class="button heart" value="FMSynth"></button>
+              <button class="button flower" value="AMSynth"></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="chords">
+              <div id="cmajor">C Major Chord</div>
+              <div id="gmajor">G Major Chord</div>
+              <div id="aminor">A Minor Chord</div>
+              <div id="fmajor">F Major Chord</div>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
@@ -82,17 +91,16 @@
 
       </div>
 
-      <div class="chords">
-        <div id="cmajor">C Major Chord</div>
-        <div id="gmajor">G Major Chord</div>
-        <div id="aminor">A Minor Chord</div>
-        <div id="fmajor">F Major Chord</div>
-      </div>
-
     </div>
+
+    <!-- <div class="note">
+      <img src="img/treble.png" id="treble">
+    </div> -->
+
     <div id="results">
-
     </div>
+
+  
   </div>
 
 </body>
