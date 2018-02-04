@@ -133,8 +133,11 @@ $(document).ready(function() {
       theSynth = new Tone.DuoSynth().toMaster();
     } else if ($(this).val() === "AMSynth"){
       theSynth = new Tone.AMSynth().toMaster();
+    } else if ($(this).val() === "DuoSynth"){
+      theSynth = new Tone.DuoSynth().toMaster();
+    } else if ($(this).val() === "MonoSynth"){
+      theSynth = new Tone.MonoSynth().toMaster();
     }
-
 
   });
 
