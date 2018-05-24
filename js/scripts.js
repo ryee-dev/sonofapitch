@@ -5,76 +5,6 @@ function Scale(root) {
   this.scaleArray = [];
 }
 
-
-Scale.prototype.createSongOne = function() {
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-}
-
-Scale.prototype.createSongTwo = function() {
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
-}
-
-Scale.prototype.createSongThree = function() {
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 1]);
-}
-
-
 Scale.prototype.createMajorScaleArray = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
@@ -84,6 +14,15 @@ Scale.prototype.createMajorScaleArray = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 9]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 11]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 12]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 12]);  
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 11]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 9]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 4]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
+
   return this.scaleArray;
 }
 
@@ -96,6 +35,14 @@ Scale.prototype.createMinorScaleArray = function() {
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 8]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 10]);
   this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 12]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 12]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 10]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 8]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 7]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 5]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 3]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex + 2]);
+  this.scaleArray.push(this.pianoKeyArray[this.rootIndex]);
   return this.scaleArray;
 }
 
